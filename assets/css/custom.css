@@ -1,0 +1,28 @@
+/****
+NOTE YOUR COLORS HERE
+
+***/
+
+
+/********** Fonts ***********/
+h1,h2,h3,h4,h5 {
+    font-family: "Gelasio";
+}
+
+p,.body {
+    font-family: "Outfit" !important;
+}
+
+
+
+/*********Header*************/
+
+
+
+
+/********** About ************/
+
+#aboutsection {
+    font-size: large ;
+    font-weight: 200;
+}
