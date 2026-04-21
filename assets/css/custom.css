@@ -1,9 +1,27 @@
 /****
 NOTE YOUR COLORS HERE
-
+dusty blue- #6f8fa6
+Nightsky Teal- #1f3e4a
+Muted Lavendar - #b8a9c9
+Warm Peach - #e6a07a
+Warm Cream - #f6f0e8
 ***/
 
 
+.bg-dark {
+    background-color: #1f3e4a !important;
+
+}
+
+.bg-dark-content {
+    background-color:  #b8a9c9 !important;
+}
+
+#about {
+    background-color: #f6f0e8;
+}
+
+#portfolio {}
 /********** Fonts ***********/
 h1,h2,h3,h4,h5 {
     font-family: "Gelasio";
@@ -15,7 +33,7 @@ p,.body {
 
 
 
-/*********Header*************/
+/********* Header *************/
 
 
 
@@ -24,5 +42,17 @@ p,.body {
 
 #aboutsection {
     font-size: large ;
+    font-weight: 300;
+}
+
+/************ Services ***********/
+#services {
+    font-size: x-large;
     font-weight: 200;
+}
+
+.client-box a img {
+opacity: 0.9;
+-webkit-transition: ease-out 0.16s;
+transition: ease-out 0.16s;
 }
