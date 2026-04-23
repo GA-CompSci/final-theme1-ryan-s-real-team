@@ -8,51 +8,151 @@ Warm Cream - #f6f0e8
 ***/
 
 
-.bg-dark {
+.bg-dark,
+.bg-black {
     background-color: #1f3e4a !important;
 
 }
 
 .bg-dark-content {
-    background-color:  #b8a9c9 !important;
+    background-color: #b8a9c9 !important;
 }
 
 #about {
     background-color: #f6f0e8;
 }
 
+.bg-gray-lighter {
+    background: #e6a07a;
+}
+
+#contact {
+    background: #f6f0e8;
+}
+
 #portfolio {}
+
+#services-background,
+.bg-dark-04 {
+    background: #e6a07a;
+    opacity: 1;
+}
+
+#resume {
+    background: #f6f0e8 !important;
+}
+
 /********** Fonts ***********/
-h1,h2,h3,h4,h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: "Gelasio";
 }
 
-p,.body {
+p,
+.body {
     font-family: "Outfit" !important;
 }
 
+#resume p {
+    font-size: x-large !important;
+    line-height: 1.8;
+    color: #1f3e4a !important;
+    margin-bottom: 1.5rem;
+}
 
 
 /********* Header *************/
+.list-inline-dash,
+.m-0 li, #main-title {
+    color: #1f3e4a !important;
+    opacity: 1;
+}
 
+.header[class*='header-color']:not(.transparent-dark) .header-logo a {
+    color: #1f3e4a;
+}
 
-
+.nav,
+.nav:hover,
+.nav:active,
+.nav-link {
+    color: #1f3e4a !important;
+}
 
 /********** About ************/
 
 #aboutsection {
-    font-size: large ;
+    font-size: x-large !important;
     font-weight: 300;
+    color: #1f3e4a;
+}
+
+h2 {
+    color: #1f3e4a;
 }
 
 /************ Services ***********/
-#services {
+#services .bg-black p,
+#services .bg-black li,
+#services ul {
+    font-size: x-large;
+    font-weight: 200;
+    color: #f6f0e8 !important;
+    list-style: none;
+}
+
+#services h5 {
     font-size: x-large;
     font-weight: 200;
 }
 
 .client-box a img {
-opacity: 0.9;
--webkit-transition: ease-out 0.16s;
-transition: ease-out 0.16s;
+    opacity: 0.9;
+    -webkit-transition: ease-out 0.16s;
+    transition: ease-out 0.16s;
+    color: #f6f0e8;
+}
+
+#services-script {
+    color: #f6f0e8 !important;
+    font-size: x-large;
+    font-weight: 200;
+    color: #f6f0e8;
+}
+
+
+
+
+/* Resume Section Styling */
+#resume {
+    background-color: #ffffff;
+}
+
+#resume p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.resume-intro {
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.resume-close {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #000;
+    margin-top: 2rem;
+}
+
+/*********** Courasel ************/
+.owl-carousel .owl-nav button.owl-next i,
+.owl-carousel .owl-nav button.owl-prev i {
+    font-size: 2.5em;
+    line-height: 36px;
 }
