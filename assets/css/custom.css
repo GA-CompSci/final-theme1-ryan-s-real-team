@@ -85,7 +85,7 @@ p,
 /********** About ************/
 
 #aboutsection {
-    font-size: x-large !important;
+    font-size: large !important;
     font-weight: 300;
     color: #1f3e4a;
 }
@@ -128,25 +128,25 @@ h2 {
 
 /* Resume Section Styling */
 #resume {
-    background-color: #ffffff;
+    background-color: #f6f0e8;
 }
 
 #resume p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #555;
+    color: #1f3e4a;
     margin-bottom: 1.5rem;
 }
 
 .resume-intro {
     font-size: 1.2rem;
-    color: #222;
+    color: #1f3e4a;
 }
 
 .resume-close {
     font-size: 1.25rem;
     font-weight: 500;
-    color: #000;
+    color: #1f3e4a;
     margin-top: 2rem;
 }
 
@@ -155,4 +155,18 @@ h2 {
 .owl-carousel .owl-nav button.owl-prev i {
     font-size: 2.5em;
     line-height: 36px;
+}
+
+
+/****** NAV *****/
+.header {
+    background: #f6f0e8;
+}
+
+.header .header-logo a {
+color: #1f3e4a;
+}
+
+.header .header-menu-extra a:not([class^='button']):not([class^="link-social"]) {
+color: #1f3e4a;
 }
