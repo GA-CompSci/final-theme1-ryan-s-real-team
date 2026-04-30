@@ -161,3 +161,12 @@ color: #1f3e4a;
 .header .header-menu-extra a:not([class^='button']):not([class^="link-social"]) {
 color: #1f3e4a;
 }
+
+/*********** Contact ***********/
+#contact h2 {
+    color:#1f3e4a!important;
+    font-size: 50px !important;
+    text-align: center;
+   
+}
+
