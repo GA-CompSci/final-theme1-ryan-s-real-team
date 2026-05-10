@@ -127,7 +127,7 @@ p,
 }
 /********** About ************/
 
-#aboutsection {
+#aboutsection-1, #aboutsection-2, #aboutsection-3 {
     font-size: large !important;
     font-weight: 300;
     color: #f6f0e8;
@@ -172,7 +172,7 @@ h2 {
 
 
 /* Resume Section Styling */
-#resume-section p{
+#resume-section-1,#resume-section-2,#resume-section-3, #resume-section-4 p{
     font-size: x-large;
     color: #1f3e4a;
     
@@ -210,3 +210,18 @@ color: #1f3e4a;
    
 }
 
+/******* Carousel *******/
+#carousel-title {
+
+    color: #1f3e4a !important;
+    font-size: 50px !important;
+    text-align: center;
+    padding: none;
+    background: #f6f0e8;
+    border-bottom: none;
+}
+
+.client-box{
+    padding: none;
+    top: none;
+}
