@@ -1,33 +1,58 @@
 /****
 NOTE YOUR COLORS HERE
-dusty blue- #6f8fa6
-Nightsky Teal- #1f3e4a
-Muted Lavendar - #b8a9c9
-Warm Peach - #e6a07a
-Warm Cream - #f6f0e8
-***/
+Dusty Blue      – #6f8fa6
+Nightsky Teal   – #1f3e4a
+Muted Lavender  – #b8a9c9
+Warm Peach      – #e6a07a
+Warm Cream      – #f6f0e8
+****/
 
+
+/* ==========================================
+   GLOBAL / BODY
+   ========================================== */
+
+body {
+    background: #f6f0e8;
+    font-family: "Cormorant Garamond", serif;
+    color: #1f3e4a; /* FIX: was #17345c (not in palette) */
+}
+
+/* FIX: was missing comma after h5 — made #cta a descendant of h5 instead of its own rule */
+h1, h2, h3, h4, h5,
+#cta {
+    font-family: "Gelasio";
+}
+
+h2 {
+    color: #f6f0e8;
+}
+
+p,
+.body {
+    font-family: "Outfit" !important;
+}
+
+
+/* ==========================================
+   BACKGROUNDS / SECTIONS
+   ========================================== */
 
 .bg-dark,
 .bg-black {
     background-color: #1f3e4a !important;
-
 }
 
 .bg-dark-content {
     background-color: #b8a9c9 !important;
 }
 
-#about {
-    background-color: #1f3e4a;
-}
-
 .bg-gray-lighter {
     background: #e6a07a;
 }
 
-#contact {
-    background: #f6f0e8;
+#about {
+    background-color: #1f3e4a;
 }
 
 #portfolio {}
@@ -38,52 +63,68 @@ Warm Cream - #f6f0e8
     opacity: 1;
 }
 
-#resume {
+#contact {
+    background: #f6f0e8;
+}
+
+/* merged: #resume and #resume-background were both setting the same background */
+#resume,
+#resume-background {
     background: #f6f0e8 !important;
 }
 
+
+/* ==========================================
+   HEADER / NAV
+   ========================================== */
+
+/* merged: two separate .header blocks were conflicting */
+.header {
+    background: #f6f0e8 !important;
+    backdrop-filter: blur(6px);
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(23, 52, 92, 0.08);
+}
+
+/* merged: three overlapping header logo color rules collapsed into one */
+.header .header-logo a,
+.header-logo h3 a,
+.header[class*='header-color']:not(.transparent-dark) .header-logo a,
 .header.transparent-light .header-logo a {
-color: #1f3e4a;
-}
-/********** Fonts ***********/
-h1,
-h2,
-h3,
-h4,
-h5 
-#cta{
-    font-family: "Gelasio";
-}
-
-p,
-.body {
-    font-family: "Outfit" !important;
-}
-
-#resume p {
-    font-size: x-large !important;
-    line-height: 1.8;
-    color: #1f3e4a !important;
-    margin-bottom: 1.5rem;
-}
-
-
-/********* Header *************/
-.list-inline-dash,
-.m-0 li, #main-title {
-    color: #1f3e4a !important;
-    opacity: 1;
-}
-
-.header[class*='header-color']:not(.transparent-dark) .header-logo a {
     color: #1f3e4a;
+    font-weight: 500;
 }
 
+.header .header-menu-extra a:not([class^='button']):not([class^="link-social"]) {
+    color: #1f3e4a;
+    font-weight: 500;
+}
+
+/* FIX: color was split between #1f3e4a and #17345c (not in palette) — unified to #1f3e4a */
 .nav,
 .nav:hover,
 .nav:active,
 .nav-link {
     color: #1f3e4a !important;
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin: 0 12px;
+}
+
+.list-inline-dash,
+.m-0 li,
+#main-title {
+    color: #1f3e4a !important;
+    opacity: 1;
+}
+
+
+/* ==========================================
+   CTA BUTTON
+   ========================================== */
+
+#cta {
+    margin-top: 12px;
 }
 
 .cta-button {
@@ -101,15 +142,21 @@ p,
 }
 
 .cta-button:hover {
+    background: #1f3e4a;
+    color: #f6f0e8;
     transform: translateY(-2px);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-    background: #1f3e4a
 }
 
 .cta-button:active {
     transform: translateY(0);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
+
+/* ==========================================
+   HERO / HOME
+   ========================================== */
 
 #home .position-middle {
     display: flex;
@@ -122,22 +169,144 @@ p,
     margin-bottom: 10px;
 }
 
-#cta {
-    margin-top: 12px;
+.rainbow-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 10% 40%, rgba(255, 153, 204, 0.45), transparent 20%),
+        radial-gradient(circle at 30% 25%, rgba(255, 190, 120, 0.45), transparent 25%),
+        radial-gradient(circle at 50% 20%, rgba(255, 235, 130, 0.45), transparent 22%),
+        radial-gradient(circle at 65% 35%, rgba(174, 255, 224, 0.45), transparent 22%),
+        radial-gradient(circle at 80% 30%, rgba(119, 193, 255, 0.45), transparent 25%),
+        radial-gradient(circle at 92% 25%, rgba(218, 184, 255, 0.45), transparent 22%),
+        #f8f4ef;
 }
-/********** About ************/
 
-#aboutsection-1, #aboutsection-2, #aboutsection-3 {
+.rainbow-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("images/hero-2.jpg");
+    opacity: 1;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    padding: 40px 20px;
+}
+
+/* FIX: was #17345c (not in palette) */
+.hero-title {
+    font-size: clamp(4rem, 9vw, 7rem);
+    line-height: 0.95;
+    font-weight: 500;
+    color: #1f3e4a;
+    margin-bottom: 20px;
+}
+
+.hero-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin: 22px 0;
+    color: #d8a56b;
+}
+
+.hero-divider::before,
+.hero-divider::after {
+    content: "";
+    width: 140px;
+    height: 1px;
+    background: #e5c59f;
+}
+
+.hero-name {
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: #1f3e4a;
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    margin-top: -8px;
+    margin-bottom: 24px;
+}
+
+.hero-text {
+    font-size: 1.8rem;
+    font-style: italic;
+    line-height: 1.4;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* FIX: border was `2px solid #11f3e4a` — 7-digit hex is invalid, corrected to #1f3e4a */
+.hero-btn-primary,
+.hero-btn-secondary {
+    padding: 14px 42px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    border: 2px solid #1f3e4a;
+    min-width: 220px;
+}
+
+.hero-btn-primary {
+    background: #1f3e4a;
+    color: #f6f0e8;
+}
+
+.hero-btn-primary:hover {
+    background: #1f3e4a;
+    color: #f6f0e8;
+}
+
+.hero-btn-secondary {
+    background: transparent;
+    color: #1f3e4a;
+}
+
+.hero-btn-secondary:hover {
+    background: #1f3e4a;
+    color: #f6f0e8;
+}
+
+
+/* ==========================================
+   ABOUT
+   ========================================== */
+
+#aboutsection-1,
+#aboutsection-2,
+#aboutsection-3 {
     font-size: large !important;
     font-weight: 300;
     color: #f6f0e8;
 }
 
-h2 {
-    color: #f6f0e8;
-}
 
-/************ Services ***********/
+/* ==========================================
+   SERVICES
+   ========================================== */
+
 #services .bg-black p,
 #services .bg-black li,
 #services ul {
@@ -152,76 +321,171 @@ h2 {
     font-weight: 200;
 }
 
-.client-box a img {
-    opacity: 0.9;
-    -webkit-transition: ease-out 0.16s;
-    transition: ease-out 0.16s;
-    color: #f6f0e8;
-}
-
+/* FIX: color was declared twice (once with !important, once without) — removed duplicate */
 #services-script {
-    color: #f6f0e8 !important;
     font-size: x-large;
     font-weight: 200;
+    color: #f6f0e8 !important;
+}
+
+#services-box1 i,
+#services-box2 i,
+#services-box3 i {
     color: #f6f0e8;
 }
 
-#services-box1 i, #services-box2 i, #services-box3 i {
-    color: #f6f0e8;
+/* FIX: removed `color` — the color property has no effect on img elements */
+.client-box a img {
+    opacity: 0.9;
+    transition: ease-out 0.16s;
+}
+
+/* FIX: `padding: none` is invalid — `none` is not a length value */
+.client-box {
+    padding: 0;
 }
 
 
-/* Resume Section Styling */
-#resume-section-1,#resume-section-2,#resume-section-3, #resume-section-4 p{
+/* ==========================================
+   RESUME
+   ========================================== */
+
+#resume p {
+    font-size: x-large !important;
+    line-height: 1.8;
+    color: #1f3e4a !important;
+    margin-bottom: 1.5rem;
+}
+
+#resume-section-1,
+#resume-section-2,
+#resume-section-3,
+#resume-section-4 p {
     font-size: x-large;
     color: #1f3e4a;
-    
 }
 
-/*********** Courasel ************/
+
+/* ==========================================
+   CONTACT
+   ========================================== */
+
+#contact h2 {
+    color: #1f3e4a !important;
+    font-size: 50px !important;
+    text-align: center;
+}
+
+
+/* ==========================================
+   CAROUSEL
+   ========================================== */
+
 .owl-carousel .owl-nav button.owl-next i,
 .owl-carousel .owl-nav button.owl-prev i {
     font-size: 2.5em;
     line-height: 36px;
 }
 
-#resume-background {
-    background-color: #f6f0e8;
-}
-
-/****** NAV *****/
-.header {
-    background: #f6f0e8;
-}
-
-.header .header-logo a {
-color: #1f3e4a;
-}
-
-.header .header-menu-extra a:not([class^='button']):not([class^="link-social"]) {
-color: #1f3e4a;
-}
-
-/*********** Contact ***********/
-#contact h2 {
-    color:#1f3e4a!important;
-    font-size: 50px !important;
-    text-align: center;
-   
-}
-
-/******* Carousel *******/
+/* FIX: removed `padding: none` and `border-bottom: none` — `none` is invalid for both */
 #carousel-title {
-
     color: #1f3e4a !important;
     font-size: 50px !important;
     text-align: center;
-    padding: none;
     background: #f6f0e8;
-    border-bottom: none;
 }
 
-.client-box{
-    padding: none;
-    top: none;
+
+/* ==========================================
+   FEATURE STRIP
+   ========================================== */
+
+.feature-strip {
+    background: #f6f0ea;
+    padding: 70px 0;
+    border-top: 1px solid rgba(23, 52, 92, 0.08);
+    border-bottom: 1px solid rgba(23, 52, 92, 0.08);
+}
+
+.feature-box {
+    text-align: center;
+    padding: 0 30px;
+}
+
+.feature-box i {
+    font-size: 2.5rem;
+    color: #d8a56b;
+    margin-bottom: 18px;
+    display: inline-block;
+}
+
+.feature-box h4 {
+    font-size: 2rem;
+    margin-bottom: 14px;
+    color: #1f3e4a;
+}
+
+.feature-box p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #1f3e4a;
+}
+
+.feature-border {
+    border-left: 1px solid rgba(216, 165, 107, 0.35);
+    border-right: 1px solid rgba(216, 165, 107, 0.35);
+}
+
+
+/* ==========================================
+   INTRO SECTION
+   ========================================== */
+
+.intro-section {
+    padding: 90px 20px;
+    text-align: center;
+    background: #1f3e4a;
+}
+
+/* FIX: was `color: f6f0e8` — missing # meant no color was ever applied */
+.intro-section h2 {
+    font-size: 4.5rem;
+    color: #f6f0e8;
+    margin-bottom: 10px;
+}
+
+.intro-section p {
+    font-size: 2rem;
+    font-style: italic;
+    color: #f6f0e8;
+}
+
+.intro-heart {
+    color: #d8a56b;
+    font-size: 2rem;
+    margin-top: 12px;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 2.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .hero-text {
+        font-size: 1.3rem;
+    }
+
+    .feature-border {
+        border: none;
+        margin: 50px 0;
+    }
 }
