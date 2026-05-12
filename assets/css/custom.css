@@ -192,7 +192,7 @@ color: #1f3e4a;
 	overflow: hidden;
 
 	/* HERO IMAGE */
-	background-image: url("images/hero-2.jpg");
+	background-image: url("../../images/hero-2.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
