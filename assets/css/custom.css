@@ -460,13 +460,13 @@ color: #1f3e4a;
 
 /* FIX: was `color: f6f0e8` — missing # meant no color was ever applied */
 .intro-section h2 {
-	font-size: 4.5rem;
+	font-size: 3.5rem;
 	color: #f6f0e8;
 	margin-bottom: 10px;
 }
 
 .intro-section p {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-style: italic;
 	color: #f6f0e8;
 }
