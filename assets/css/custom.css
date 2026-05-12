@@ -401,12 +401,45 @@ color: #1f3e4a;
 /* FIX: removed `padding: none` and `border-bottom: none` — `none` is invalid for both */
 #carousel-title {
 	color: #f6f0ea!important;
-	font-size: 50px !important;
+	font-size: 80px !important;
 	text-align: center;
 	background: #1f3e4a;
 }
 
+#carousel-title-2 {
+	color: #d8a56b!important;
+	font-size: 30px !important;
+	text-align: center;
+	background: #1f3e4a;
+	margin-top: -12px;
+}
 
+#carousel-heart {
+	color: #d8a56b;
+	font-size: 60px;
+	margin-top: -80px;
+}
+
+.bi-arrow-right-short, .bi-arrow-left-short{
+	color:#d8a56b;
+	font: "Gelasio";
+	cursor: pointer;
+	font-size: 2rem;
+	background: none;
+	border: none;
+}
+
+.carousel-paw {
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 10px;
+}
+
+.carousel-paw i {
+    color: #d8a56b;
+    font-size: 2rem;
+    opacity: 0.85;
+}
 /* ==========================================
    FEATURE STRIP
    ========================================== */
