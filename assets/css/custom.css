@@ -14,7 +14,7 @@ Warm Cream      – #f6f0e8
 
 body {
 	background: #f6f0e8;
-	font-family: "Cormorant Garamond", serif;
+	font-family: "Gelasio", serif;
 	color: #1f3e4a;
 	/* FIX: was #17345c (not in palette) */
 }
@@ -499,4 +499,27 @@ color: #1f3e4a;
 		border: none;
 		margin: 50px 0;
 	}
+}
+
+.header.transparent-dark, .header.transparent-light {
+background: transparent !important;
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+
+
+/********** Feature Strip ***********/
+
+body {
+font-family: "Gelasio", serif;
+color: #1f3e4a;
+}
+
+.feature-box i {
+    font-size: 2.5rem;
+    color: #d8a56b;
+    margin-bottom: 18px;
+    display: block;
+    text-align: center;
+    width: 100%;
 }
